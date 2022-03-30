@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Serif+Pro&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source Sans Pro' 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Source Sans Pro','Verdana','Helvetica', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+/******************************************************/
+
+.music{
+    position: relative;
+
+    top: 90%;
+    left: 95%;
+}
+.icon-music{
+    
+    position: fixed;
+    z-index: 2000;
+    /* font-size: 20%; */
+    color: #000;
+    width: 20px;
+    height: 20px;
+    top: 90%;
+    left: 95%;
+    cursor: pointer;
+    /* right: 50px; */
+
+}
+
+/******************************************************/
+
+
+.nav {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 0.4s linear;
+    font-family: 'Source Sans Pro','Verdana','Helvetica', sans-serif;
+    
+}
+
+.logo {
+    margin-left: 64px;
+}
+
+.logo h3 a {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Source Serif Pro';
+    text-decoration: none;
+    color: #fff;
+}
+.navigate {
+    margin-right: 40px;
+}
+
+.navigate ul {
+    list-style-type: none;
+    display: flex;
+   
+}
+
+.navigate ul li {
+    padding: 0 12px;
+    line-height: 70px;
+    /* color: white; */
+}
+.navigate ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+
+}
+
+@media (max-width: 960px){
+    .navigate{
+        display: none;
+    }
+    .logo{
+        display: block;
+    }
+}
+
+
+
+
+
+#header {
+    height: 100vh;
+    background: url('../imgs/header.jpg') top center / 100% no-repeat;
+    position: relative;
+
+
+}
+
+/* ********************************************************************** */
+
+/* !Xem lại code*/
+/*Animated Pink Heart */
+span-heart {
+	position: absolute;
+	pointer-events: none;
+	filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+	animation: fadeInOut 1s linear infinite;
+}
+
+@keyframes fadeInOut {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	20%,
+	80% {
+		opacity: 1;
+	}
+}
+
+span-heart::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url(../imgs/pink_heart.png);
+	background-size: cover;
+	animation: moveShape 1s linear infinite;
+}
+
+@keyframes moveShape {
+	0% {
+		transform: translate(0) rotate(0deg);
+	}
+	100% {
+		transform: translate(300px) rotate(360deg);
+	}
+}
+
+/* *********************************************************************** */
+
+
+
+#header::before {
+    content: '';
+    position: absolute;
+    /* position: relative; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(23, 23, 38, 0.6);
+    /* min-width: 900px; */
+    /* background-size: inherit; */
+}
+
+.header_content {
+    position: absolute;
+    
+    color: #fff;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.header_content h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 88px;
+    font-weight: 200;
+    color: #fff;
+    /* opacity: 0.7; làm mờ */
+}
+
+.header_content p {
+    margin: 28px 0;
+    font-size: 20px;
+    opacity: 0.7; /* làm mờ chữ */
+}
+
+button {
+    margin-top: 8px;
+    padding: 12px 28px;
+    background-color: #e35d5d;
+    outline: none;
+    border: none;
+    border-radius: 5px; /* làm tròn viền*/
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+
+    /*- Effect */
+
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-transform: uppercase; /* viết hoa toàn bộ chữ*/
+    letter-spacing: 4px; /* khoảng cách giữa các chữ*/
+    text-decoration: none; /*bỏ gạch chân*/
+    font-size: 24px;
+    overflow: hidden; /* che cái gạch chân ở trên*/
+    transition: 0.2s;
+}
+
+button:hover {
+    /* background-color: #f08686; */
+
+
+
+    /*- Effect */
+
+    /* color: #255784; */
+    background: #e32f2f;
+    box-shadow: 0 0 10px #e32f2f, 0 0 40px #e32f2f, 0 0 80px #e32f2f;
+
+
+
+    transition-delay: 0.1s; 
+}
+
+.click-me{
+    color: #fff ;
+    text-decoration: none;
+
+}
+
+.click-me:hover{
+    color: #fff
+}
+
+/* ############################################################# */
+
+#date {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 96px 15px;
+    margin: 0 69px;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    flex-wrap: wrap;
+
+}
+
+.date-content {
+    flex: 1;
+   
+    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px 0 0;
+    width: 330px;
+
+}
+.date-content h2{
+    font-size: 56px;
+    font-family: 'Playfair Display',sans-serif;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #000;
+}
+.date-content .date-address{
+    margin: 8px 0 16px 0;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #333;
+    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.date-content .date-paragraphs{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #7c7e7f;
+    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 24px;
+    padding-right:32px ;
+    /* box-sizing: border-box; */
+
+
+}
+.date-img {
+    flex: 1;
+    padding: 15px 15px;
+    /* display: flex; */
+}
+
+.date-img img {
+    width: 400px ;
+
+}
+#love-story{
+    /* transition: all 0.4s linear; */
+
+    /* position: absolute; */
+    position: relative;
+    /* box-sizing: border-box; */
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    justify-items: center;
+    background-color: #fff9f5;
+    width: 100%;
+    /* background-color: #c41616; */
+    padding: 65px;
+}
+
+ol{
+    list-style-type: none;
+}
+
+#love-story .our-love-story h1{
+    font-size: 51.2px;
+    font-weight: 400;
+}
+#love-story .our-love-story .the-story-of{
+    font-size: 16px;
+    padding: 0 0 30px 0;
+    
+    color: #222;
+    
+    font-size: 14.5px;
+    font-weight: 600;
+    opacity: .8;
+}
+.text-in-love-story h5{
+    font-size: 20px;
+}
+.text-in-love-story span{
+    font-size: 14.5px;
+    font-weight: 600;
+    opacity: .8;
+}
+#love-story .love-story-img img{
+    /* width: 22%; */
+    width: 230px;
+    height: 200px;
+    padding: 40px 40px;
+}
+.love-story-icon-and-date{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+ .bg-icon-heart svg{
+    /* background-color: #cc9999; */
+    /* width: 1.8%; */
+    /* border-radius: 50%; */
+    width: 20px;
+    height: 20px;
+      
+}
+ .text{
+    /* flex: 1; */
+}
+ .icon-and-date .text h5{
+    font-size: 20px;
+    /* font-weight: 700; */
+
+}
+.icon-and-date .text .date-lovestory{
+    font-size: 14.5px;
+    color: #e35d5d;
+    font-weight: 600;
+    
+}
+
+
+
+
+
+
